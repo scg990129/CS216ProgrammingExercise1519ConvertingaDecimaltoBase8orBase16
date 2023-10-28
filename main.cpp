@@ -24,6 +24,9 @@ void convertBase(ostream &out, int num, const int &base){
     if (base <= num){
         convertBase(out, num / base, base);
     }
-    print("Ans: %s\n", ((num % base < 10)? num % base : (char)(num % base + 55));
-    out << ((num % base < 10)? num % base : (char)(num % base + 55) );
+//    printf("Ans: %s\n", (num % base < 10)? to_string(num % base).c_str() :
+//    to_string((char)(num % base + 55)).c_str());
+//    char c = (num % base < 10)? to_string(num % base).c_str() :
+//            to_string((char)(num % base + 55)).c_str();
+    (num % base < 10)? out << num % base: out << static_cast<char>(num % base + 55);
 }
